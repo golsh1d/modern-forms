@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form project</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4f2890a18c.js" crossorigin="anonymous"></script>
+    <style>
+        .img-res {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+
+        .project-title {
+            display: flex;
+            justify-content: center;
+            padding: 100px;
+            font-size: 35px;
+            font-weight: bolder;
+            color: #000;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid #efefef;
+            border-radius: 5px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+        }
+
+        .left-side {
+            display: flex;
+            flex-basis: 50%;
+            max-width: 50%;
+            flex-direction: column;
+        }
+
+        .right-side {
+            display: flex;
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+
+        .social-media-icons {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        /* .social-media-icons::before {
+            content: '';
+            width: 100%;
+            height: 12px;
+            background-color: #efefef;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            z-index: -1;
+        } */
+
+        .social-media-icons i {
+            font-size: 30px;
+            margin-left: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: -8px;
+            transition: all .5s ease;
+        }
+
+        .social-media-icons a:nth-child(1) i {
+            color: #3A5794;
+        }
+
+        .social-media-icons a:nth-child(1) i:hover {
+            color: #fff;
+            background-color: #3A5794;
+            border-radius: 50%;
+        }
+
+        .social-media-icons a:nth-child(2) i {
+            color: #DC3C2A;
+        }
+
+        .social-media-icons a:nth-child(2) i:hover {
+            color: #fff;
+            background-color: #DC3C2A;
+            border-radius: 50%;
+        }
+
+        .left-side form {
+            width: 100%;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-side form .input-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .left-side form .input-group label {
+            font-size: 18px;
+        }
+
+        .left-side form .input-group input {
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+            border: 1px solid #f3f2f2;
+            outline: 0;
+            margin: 5px 0 16px 0;
+            padding-left: 2px;
+            border-width: 0 0 1px 0;
+        }
+
+        .left-side form .input-group span::after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, #3A5794 40%, #DC3C2A);
+            transition: all .5s linear;
+        }
+
+        .left-side form .input-group input:focus~span::after {
+            width: 100%;
+        }
+
+        .left-side form .input-group input[type=checkbox] {
+            height: 15px;
+            position: absolute;
+            top: 2px;
+            left: -20px;
+        }
+
+        .left-side form input[type=submit] {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #efefef;
+            border-radius: 3px;
+            outline: 0;
+            margin-top: 16px;
+            color: #fff;
+            background-color: #3A5794;
+            cursor: pointer;
+            transition: all .5s ease;
+        }
+
+        .left-side form input[type=submit]:hover {
+            background-color: #213255;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="project-title">Form Number two</p>
+    <div class="container">
+        <div class="left-side">
+            <div class="social-media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <form action="" autocomplete="off">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="username..." autofocus required>
+                    <span></span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="password..." required>
+                    <span></span>
+                </div>
+                <div class="input-group">
+                    <label for="remember">Remember me</label>
+                    <input type="checkbox" id="remember">
+                </div>
+                <input type="submit" value="Log in">
+            </form>
+        </div>
+        <div class="right-side">
+            <img class="img-res" src="../assets/img/form-img.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

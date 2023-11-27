@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form project</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500&display=swap" rel="stylesheet">
+    <style>
+        .project-title {
+            display: flex;
+            justify-content: center;
+            padding: 100px;
+            font-size: 35px;
+            font-weight: bolder;
+            color: #000;
+        }
+
+        .container {
+            max-width: 600px;
+            min-height: 290px;
+            margin: auto;
+            background-color: #2b4242;
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid #444;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+            animation: moveup 1.2s ease;
+        }
+
+        @keyframes moveup {
+            from {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+        }
+
+        .inputs {
+            position: relative;
+            float: left;
+            width: 100%;
+            padding: 10px 10px 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .inputs p {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .inputs input {
+            width: 100%;
+            background: none;
+            border-color: #aaa;
+            border-width: 0 0 2px 0;
+            color: #fff;
+            outline: 0;
+            transition: all .5s ease;
+        }
+
+        .inputs input:focus {
+            border-bottom: 2px solid #fff;
+        }
+
+        .inputs div.half {
+            width: 50%;
+        }
+
+        .inputs input:placeholder-shown+label {
+            color: #999;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        .inputs input:focus+label,
+        .inputs input+label {
+            color: #999;
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            line-height: 60px;
+            font-size: 15px;
+            transition: all .5s ease-in;
+        }
+
+        .inputs button {
+            padding: 10px 30px;
+            background-color: #465;
+            color: #fff;
+            border: 1px solid transparent;
+            float: right;
+            transition: border .25s ease;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .inputs button:hover {
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="project-title">Form Number One</p>
+    <div class="container">
+        <div class="inputs">
+            <p>Registration Form</p>
+            <form action="">
+                <div class="inputs half"><input type="text" name="username" placeholder=" " required><label>User
+                        Name</label>
+                </div>
+                <div class="inputs half"><input type="password" name="password" placeholder=" "
+                        required><label>Password</label>
+                </div>
+                <div class="inputs full"><input type="text" name="name" placeholder=" " required><label>First Name and
+                        Last
+                        Name</label></div>
+                <div class="inputs"><button type="submit" name="submit">Register</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
